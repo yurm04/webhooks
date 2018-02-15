@@ -90,4 +90,4 @@ With your local development environment set up, you can now set your repo up wit
 6. Set the "Secret" field equal to the `SECRET` environment variable value created earlier.
 7. Under "Which events would you like to trigger this webhook?" check off the "Let me select individual events."  This will expand the event options where you should select "Release" and "Pull Request."
 8. Ensure that "Active" is checked off, and click "Add webhook" at the bottom of the form.
-9. Celebrate :tada: You're now ready to start testing your webhook locally.
+9. Celebrate :clap: You're now ready to start testing your webhook locally.
