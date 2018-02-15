@@ -1,5 +1,6 @@
 # local run script with private keys
 run_dev.sh
+.DS_Store
 
 # ngrok listener
 ngrok
