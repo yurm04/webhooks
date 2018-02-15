@@ -11,8 +11,8 @@ const userAgent = {
 }
 
 const prep = (pr) => {
-		// if PR has been merged within 5 minutes, prep it as a release line item
-		if (pr.merged && (moment().diff(moment(pr.merged_at, 'minutes')) <= 5)) {
+    // only handle if the PR has been merged
+		if (pr.merged) {
 			// release request options
 			const options = {
 				method: 'GET',
@@ -67,7 +67,7 @@ const editRelease = (release, pr) => {
 		.catch((err) => { winston.error(err) })
 }
 
-const getPrDesc = ({ number, title }) => (`${title} (#${number})`)
+const getPrDesc = ({ number, title }) => (`- ${title} (#${number})`)
 
 const createRelease = (pr) => {
 	// line item formatted as "PR_Title (#PR_number)"
